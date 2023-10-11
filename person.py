@@ -20,3 +20,9 @@ class Person(object):
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
+	
+	def fib(self):
+		
+		lib.Person_fib.argtypes = [ctypes.c_void_p]
+		lib.Person_fib.restype = ctypes.c_int
+		return lib.Person_fib(self.obj)
