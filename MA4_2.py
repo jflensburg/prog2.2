@@ -52,6 +52,7 @@ def fib_time(lst):
 		f.fib()
 		end3 = pc()
 		cpp_lst += [round(end3-start3, 3)]
+		print(i) # vill se vilket tal i listan jag är på
 
 	print(' ')            
 	print('Python: ', py_lst)
@@ -61,22 +62,19 @@ def fib_time(lst):
 	print('C++: ', cpp_lst)
 	print(' ')
 
-	# Skapa en "connected scatterplot" för de tre dataserierna
 	plt.figure(figsize=(8, 6))
 
 	plt.plot(lst, py_lst, marker='o', label='Python')
 	plt.plot(lst, nu_lst, marker='o', label='Python and Numba')
 	plt.plot(lst, cpp_lst, marker='o', label='C++')
 
-	# Lägg till axelrubriker och en legend
 	plt.xlabel('Input (Age)')
 	plt.ylabel('Time [s]')
 	plt.legend()
 
-	# Visa plot
 	plt.title("Time to get Fibonacci's number")
 	plt.grid(True)
-	plt.savefig('figur.png', format='png', bbox_inches='tight')
+	#plt.savefig('figur.png', format='png', bbox_inches='tight')
 	plt.show()
 
 # ------
