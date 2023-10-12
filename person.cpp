@@ -3,21 +3,21 @@
 
 class Person{
 	public:
-		Person(int);
-		int get();
-		void set(int);
+		Person(unsigned int); // ändrade alla 'int' till 'unsigned int' så fib(47) skulle funka för c++
+		unsigned int get();
+		void set(unsigned int);
 
 		// tillägg
-		int fib() {
+		unsigned int fib() {
 			return fib_calc(age);
 		}
 
 
 	private:
-		int age;
+		unsigned int age;
 
 		//tilägg
-		int fib_calc(int n) {
+		unsigned int fib_calc(unsigned int n) {
 
 			if (n<= 1) {
 				return n;
@@ -28,24 +28,24 @@ class Person{
 
 	};
  
-Person::Person(int n){
+Person::Person(unsigned int n){
 	age = n;
 	}
  
-int Person::get(){
+unsigned int Person::get(){
 	return age;
 	}
  
-void Person::set(int n){
+void Person::set(unsigned int n){
 	age = n;
 	}
 
 
 extern "C"{
-	Person* Person_new(int n) {return new Person(n);}
-	int Person_get(Person* person) {return person->get();}
-	void Person_set(Person* person, int n) {person->set(n);}
-	int Person_fib(Person*person) {return person ->fib();} // bryggkoden
+	Person* Person_new(unsigned int n) {return new Person(n);}
+	unsigned int Person_get(Person* person) {return person->get();}
+	void Person_set(Person* person, unsigned int n) {person->set(n);}
+	unsigned int Person_fib(Person*person) {return person ->fib();} // bryggkoden
 	void Person_delete(Person* person){
 		if (person){
 			delete person;

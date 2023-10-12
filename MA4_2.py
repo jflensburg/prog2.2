@@ -27,9 +27,11 @@ def fib_py_numba(n):
                 return(fib_py_numba(n-1) + fib_py_numba(n-2))
         
 
-# --- mina funktioner för olika n ---
+# --- funktion för olika n ---
 
-n_lst = [x for x in range(30, 46)]
+#n_lst = [x for x in range(30, 46)]
+n_lst = [x for x in range(20, 31)]
+#n_lst = [47]
 
 def fib_time(lst):
 
@@ -44,15 +46,15 @@ def fib_time(lst):
 		end1 = pc()
 		py_lst += [round(end1-start1, 3)]
 		start2 = pc()
-		fib_py_numba(i)
+		fib_py_numba(i) #vill printa fib i uppg då n=47
 		end2 = pc()
 		nu_lst += [round(end2-start2, 3)]
 		start3 = pc()
 		f = Person(i)
-		f.fib()
+		f.fib() #vill printa fib i uppg då n=47
 		end3 = pc()
 		cpp_lst += [round(end3-start3, 3)]
-		print(i) # vill se vilket tal i listan jag är på
+		print('Working on n:', i) # vill se vilket tal i listan jag är på
 
 	print(' ')            
 	print('Python: ', py_lst)
@@ -64,7 +66,7 @@ def fib_time(lst):
 
 	plt.figure(figsize=(8, 6))
 
-	plt.plot(lst, py_lst, marker='o', label='Python')
+	#plt.plot(lst, py_lst, marker='o', label='Python')
 	plt.plot(lst, nu_lst, marker='o', label='Python and Numba')
 	plt.plot(lst, cpp_lst, marker='o', label='C++')
 
@@ -74,8 +76,8 @@ def fib_time(lst):
 
 	plt.title("Time to get Fibonacci's number")
 	plt.grid(True)
-	plt.savefig('fig_fib_time.png', format='png', bbox_inches='tight')
-	plt.show()
+	#plt.savefig('figure.png', format='png', bbox_inches='tight')
+	#plt.show()
 
 # ------
 
