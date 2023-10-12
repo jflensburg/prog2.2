@@ -1,3 +1,11 @@
+"""
+Solutions to module MA4
+Student: Jonas Flensburg
+Mail: jonas.flensburg@gmail.com
+Reviewed by: Roman Iakymchuk
+Reviewed date: 2023-10-12
+"""
+
 #!/usr/bin/env python3
 
 from person import Person
@@ -66,7 +74,7 @@ def fib_time(lst):
 
 	plt.figure(figsize=(8, 6))
 
-	#plt.plot(lst, py_lst, marker='o', label='Python')
+	plt.plot(lst, py_lst, marker='o', label='Python')
 	plt.plot(lst, nu_lst, marker='o', label='Python and Numba')
 	plt.plot(lst, cpp_lst, marker='o', label='C++')
 

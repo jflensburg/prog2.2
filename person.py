@@ -1,3 +1,11 @@
+"""
+Solutions to module MA4
+Student: Jonas Flensburg
+Mail: jonas.flensburg@gmail.com
+Reviewed by: Roman Iakymchuk
+Reviewed date: 2023-10-12
+"""
+
 """ Python interface to the C++ Person class """
 import ctypes
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
