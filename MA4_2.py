@@ -74,7 +74,7 @@ def fib_time(lst):
 
 	plt.title("Time to get Fibonacci's number")
 	plt.grid(True)
-	#plt.savefig('figur.png', format='png', bbox_inches='tight')
+	plt.savefig('figure.png', format='png', bbox_inches='tight')
 	plt.show()
 
 # ------
