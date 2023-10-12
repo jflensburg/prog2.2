@@ -29,7 +29,7 @@ def fib_py_numba(n):
 
 # --- mina funktioner för olika n ---
 
-n_lst = [x for x in range(30, 34)]
+n_lst = [x for x in range(30, 46)]
 
 def fib_time(lst):
 
@@ -74,7 +74,7 @@ def fib_time(lst):
 
 	plt.title("Time to get Fibonacci's number")
 	plt.grid(True)
-	plt.savefig('figure.png', format='png', bbox_inches='tight')
+	plt.savefig('fig_fib_time.png', format='png', bbox_inches='tight')
 	plt.show()
 
 # ------
